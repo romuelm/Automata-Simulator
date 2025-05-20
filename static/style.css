@@ -1,0 +1,104 @@
+body {
+    background-color: #f8f9fa;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.result-box {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.accepted {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.graph-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    min-height: 400px;
+}
+
+.graph-container svg {
+    max-width: 100%;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+@keyframes highlight {
+    0% { 
+        fill: #f8f9fa;
+        filter: none;
+    }
+    50% { 
+        fill: #ffc107;
+        filter: drop-shadow(0 0 8px #ffc107);
+    }
+    100% { 
+        fill: #f8f9fa;
+        filter: none;
+    }
+}
+
+@keyframes highlight-edge {
+    0% { stroke: #007bff; stroke-width: 2; }
+    50% { stroke: #ffc107; stroke-width: 3; }
+    100% { stroke: #007bff; stroke-width: 2; }
+}
+
+.highlight-node {
+    animation: highlight 1s ease-in-out;
+    transform-origin: center;
+}
+
+.highlight-edge {
+    animation: highlight-edge 1s ease-in-out;
+}
+
+@keyframes accept-glow {
+    0% { 
+        fill: #d4edda;
+        filter: none;
+    }
+    50% { 
+        fill: #28a745;
+        filter: drop-shadow(0 0 8px #28a745);
+    }
+    100% { 
+        fill: #d4edda;
+        filter: none;
+    }
+}
+
+.accept-state {
+    animation: accept-glow 1s ease-in-out infinite;
+    transform-origin: center;
+} 
