@@ -70,6 +70,24 @@
                 </div>
             </div>
 
+            <!-- PDA Graph Display (for binary DFA) -->
+            {% if dfa_type == 'binary' %}
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Pushdown Automata</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="graph-container text-center">
+                                <img src="{{ url_for('static', filename='pda_graph_binary.png') }}" alt="Binary PDA Graph" class="img-fluid"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
             <!-- PDA Graph Display (only for alphabet DFA) -->
             {% if dfa_type == 'alphabet' and pda_graph %}
             <div class="row mb-4">
